@@ -1,0 +1,44 @@
+name = "Adltix"
+handle = "adltix"
+client_id = "b08ade48d3d7fec48570e74c4dfc4a02"
+application_url = "https://adltix-merchant.vercel.app"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "adltix-test.myshopify.com"
+
+[access_scopes]
+scopes = "read_orders,read_fulfillments,read_products,read_customers,write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://adltix-merchant.vercel.app/auth/callback",
+  "https://adltix-merchant.vercel.app/auth/shopify/callback"
+]
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = ["orders/create"]
+  uri = "/webhooks"
+
+  [[webhooks.subscriptions]]
+  topics = ["orders/fulfilled"]
+  uri = "/webhooks"
+
+  [[webhooks.subscriptions]]
+  topics = ["orders/cancelled"]
+  uri = "/webhooks"
+
+  [[webhooks.subscriptions]]
+  topics = ["refunds/create"]
+  uri = "/webhooks"
+
+  [[webhooks.subscriptions]]
+  topics = ["app/uninstalled"]
+  uri = "/webhooks"
+
+[pos]
+embedded = false

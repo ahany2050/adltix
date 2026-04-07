@@ -1,0 +1,36 @@
+{
+  "name": "merchant-portal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "shopify app dev",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "typecheck": "react-router typegen && tsc",
+    "shopify": "shopify",
+    "docker-start": "react-router-serve ./build/server/index.js"
+  },
+  "dependencies": {
+    "@shopify/app-bridge-react": "^4.1.0",
+    "@shopify/polaris": "^13.9.0",
+    "@shopify/shopify-app-react-router": "^1.0.0",
+    "@shopify/shopify-app-session-storage": "^5.0.0",
+    "@shopify/shopify-api": "^13.0.0",
+    "@adltix/database": "workspace:*",
+    "@adltix/utils": "workspace:*",
+    "isbot": "^5.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.0.0",
+    "stripe": "^17.0.0"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.0.0",
+    "@react-router/serve": "^7.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vite-tsconfig-paths": "^5.1.0"
+  }
+}
