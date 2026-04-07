@@ -48,7 +48,8 @@ export default function RegisterPage() {
           email,
           first_name: firstName,
           last_name: lastName,
-          status: "pending",
+          is_active: true,
+          is_verified: false,
         });
 
       if (insertError) {
