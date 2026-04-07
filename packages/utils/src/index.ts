@@ -1,4 +1,4 @@
-export { generateAffiliateCode, buildAffiliateUrl } from "./affiliate";
+export { generateAffiliateCode, buildAffiliateUrl, buildStoreDiscountUrl } from "./affiliate";
 export {
   calculateCommission,
   type CommissionTier,
