@@ -143,21 +143,8 @@ export default function DashboardLayout({
       >
         {/* Brand */}
         <div className="flex h-16 items-center gap-3 px-6">
-          <div className="flex h-9 w-9 items-center justify-center rounded-apple-sm bg-apple-blue">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
+          <div className="flex h-9 w-9 items-center justify-center rounded-apple-sm bg-brand">
+            <span className="text-[18px] font-bold text-white leading-none">A</span>
           </div>
           <span className="font-display text-headline text-primary">
             Adltix
@@ -175,11 +162,11 @@ export default function DashboardLayout({
                 onClick={() => setSidebarOpen(false)}
                 className={`flex items-center gap-3 rounded-apple-sm px-3 py-2.5 text-subheadline font-medium transition-all duration-150 ease-apple ${
                   active
-                    ? "bg-apple-blue/10 text-apple-blue"
+                    ? "bg-brand/10 text-brand"
                     : "text-secondary hover:bg-surface hover:text-primary"
                 }`}
               >
-                <span className={active ? "text-apple-blue" : "text-tertiary"}>
+                <span className={active ? "text-brand" : "text-tertiary"}>
                   {item.icon}
                 </span>
                 {item.name}

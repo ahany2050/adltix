@@ -39,21 +39,8 @@ export default function LoginPage() {
       <div className="w-full max-w-[400px]">
         {/* Logo / Brand */}
         <div className="mb-10 text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-apple-xl bg-apple-blue">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5z" />
-              <path d="M2 17l10 5 10-5" />
-              <path d="M2 12l10 5 10-5" />
-            </svg>
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-apple-xl bg-brand">
+            <span className="text-[28px] font-bold text-white leading-none">A</span>
           </div>
           <h1 className="font-display text-title-1 text-primary">
             Welcome back
@@ -149,7 +136,7 @@ export default function LoginPage() {
           Don&apos;t have an account?{" "}
           <Link
             href="/register"
-            className="font-medium text-apple-blue hover:underline"
+            className="font-medium text-brand hover:underline"
           >
             Create one
           </Link>

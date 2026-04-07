@@ -8,9 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Apple HIG system colors
+        // Adltix brand colors
         apple: {
-          blue: "#0071E3",
+          blue: "#F15B4C",
           green: "#34C759",
           red: "#FF3B30",
           orange: "#FF9F0A",
@@ -20,9 +20,14 @@ const config: Config = {
           teal: "#5AC8FA",
           indigo: "#5856D6",
         },
+        brand: {
+          DEFAULT: "#F15B4C",
+          light: "#F26B5E",
+          dark: "#D94A3D",
+        },
         // Semantic surfaces
         surface: {
-          DEFAULT: "#F5F5F7",
+          DEFAULT: "#FDFAF6",
           elevated: "#FFFFFF",
         },
         // Semantic text
@@ -34,16 +39,16 @@ const config: Config = {
       },
       fontFamily: {
         display: [
-          "SF Pro Display",
+          "Poppins",
+          "Inter",
           "-apple-system",
           "BlinkMacSystemFont",
-          "Inter",
           "Segoe UI",
           "sans-serif",
         ],
         sans: [
+          "Poppins",
           "Inter",
-          "SF Pro Text",
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
@@ -80,7 +85,7 @@ const config: Config = {
         card: "0 2px 20px rgba(0,0,0,0.06)",
         "card-hover": "0 4px 24px rgba(0,0,0,0.1)",
         elevated: "0 8px 32px rgba(0,0,0,0.12)",
-        focus: "0 0 0 4px rgba(0,113,227,0.25)",
+        focus: "0 0 0 4px rgba(241,91,76,0.25)",
       },
       spacing: {
         "apple-xs": "4px",
