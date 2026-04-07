@@ -21,7 +21,6 @@ export default function RegisterPage() {
 
     const supabase = createClient();
 
-    // 1. Sign up the user with Supabase Auth
     const { data: authData, error: signUpError } = await supabase.auth.signUp({
       email,
       password,
@@ -39,7 +38,6 @@ export default function RegisterPage() {
       return;
     }
 
-    // 2. Insert into the influencers table
     if (authData.user) {
       const { error: insertError } = await supabase
         .from("influencers")
@@ -64,14 +62,16 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-4">
+    <div className="flex min-h-screen items-center justify-center px-4 bg-surface">
       <div className="w-full max-w-[400px]">
         {/* Logo / Brand */}
         <div className="mb-10 text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-apple-xl bg-brand">
-            <span className="text-[28px] font-bold text-white leading-none">A</span>
+          <div className="mx-auto mb-4 flex items-center justify-center">
+            <span className="text-[48px] font-extrabold tracking-tight text-primary">
+              AD<span className="text-accent-red">L</span>TIX
+            </span>
           </div>
-          <h1 className="font-display text-title-1 text-primary">
+          <h1 className="font-display text-title-2 text-primary">
             Create your account
           </h1>
           <p className="mt-2 text-callout text-secondary">
@@ -81,7 +81,7 @@ export default function RegisterPage() {
 
         {/* Error alert */}
         {error && (
-          <div className="mb-6 rounded-apple-md bg-apple-red/10 px-4 py-3 text-subheadline text-apple-red">
+          <div className="mb-6 rounded-md bg-error/15 px-4 py-3 text-subheadline text-error">
             {error}
           </div>
         )}
@@ -104,7 +104,7 @@ export default function RegisterPage() {
                 placeholder="Jane"
                 required
                 autoComplete="given-name"
-                className="apple-input"
+                className="adltix-input"
               />
             </div>
             <div>
@@ -122,7 +122,7 @@ export default function RegisterPage() {
                 placeholder="Doe"
                 required
                 autoComplete="family-name"
-                className="apple-input"
+                className="adltix-input"
               />
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function RegisterPage() {
               placeholder="you@example.com"
               required
               autoComplete="email"
-              className="apple-input"
+              className="adltix-input"
             />
           </div>
 
@@ -162,7 +162,7 @@ export default function RegisterPage() {
               required
               minLength={8}
               autoComplete="new-password"
-              className="apple-input"
+              className="adltix-input"
             />
           </div>
 
@@ -205,7 +205,7 @@ export default function RegisterPage() {
           Already have an account?{" "}
           <Link
             href="/login"
-            className="font-medium text-brand hover:underline"
+            className="font-medium text-lime hover:underline"
           >
             Sign in
           </Link>

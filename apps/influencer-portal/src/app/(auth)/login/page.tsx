@@ -35,14 +35,16 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-4">
+    <div className="flex min-h-screen items-center justify-center px-4 bg-surface">
       <div className="w-full max-w-[400px]">
         {/* Logo / Brand */}
         <div className="mb-10 text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-apple-xl bg-brand">
-            <span className="text-[28px] font-bold text-white leading-none">A</span>
+          <div className="mx-auto mb-4 flex items-center justify-center">
+            <span className="text-[48px] font-extrabold tracking-tight text-primary">
+              AD<span className="text-accent-red">L</span>TIX
+            </span>
           </div>
-          <h1 className="font-display text-title-1 text-primary">
+          <h1 className="font-display text-title-2 text-primary">
             Welcome back
           </h1>
           <p className="mt-2 text-callout text-secondary">
@@ -52,7 +54,7 @@ export default function LoginPage() {
 
         {/* Error alert */}
         {error && (
-          <div className="mb-6 rounded-apple-md bg-apple-red/10 px-4 py-3 text-subheadline text-apple-red">
+          <div className="mb-6 rounded-md bg-error/15 px-4 py-3 text-subheadline text-error">
             {error}
           </div>
         )}
@@ -74,7 +76,7 @@ export default function LoginPage() {
               placeholder="you@example.com"
               required
               autoComplete="email"
-              className="apple-input"
+              className="adltix-input"
             />
           </div>
 
@@ -93,7 +95,7 @@ export default function LoginPage() {
               placeholder="Enter your password"
               required
               autoComplete="current-password"
-              className="apple-input"
+              className="adltix-input"
             />
           </div>
 
@@ -136,7 +138,7 @@ export default function LoginPage() {
           Don&apos;t have an account?{" "}
           <Link
             href="/register"
-            className="font-medium text-brand hover:underline"
+            className="font-medium text-lime hover:underline"
           >
             Create one
           </Link>

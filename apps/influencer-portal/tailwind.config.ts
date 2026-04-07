@@ -8,34 +8,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Adltix brand colors
-        apple: {
-          blue: "#F15B4C",
-          green: "#34C759",
-          red: "#FF3B30",
-          orange: "#FF9F0A",
-          yellow: "#FFCC00",
-          purple: "#AF52DE",
-          pink: "#FF2D55",
-          teal: "#5AC8FA",
-          indigo: "#5856D6",
-        },
+        // Adltix brand colors (from company deck)
         brand: {
-          DEFAULT: "#F15B4C",
-          light: "#F26B5E",
-          dark: "#D94A3D",
+          DEFAULT: "#E8602D",   // Primary orange
+          light: "#F07040",
+          dark: "#C94E20",
         },
-        // Semantic surfaces
+        lime: {
+          DEFAULT: "#CDFF00",   // Neon lime accent
+          dark: "#B8E600",
+        },
+        accent: {
+          red: "#E84B3A",       // Logo slash red
+          orange: "#E8602D",    // Cards & highlights
+        },
+        // Dark theme surfaces
         surface: {
-          DEFAULT: "#FDFAF6",
-          elevated: "#FFFFFF",
+          DEFAULT: "#2D2D2D",   // Main background
+          elevated: "#3A3A3A",  // Cards & elevated
+          overlay: "#444444",   // Hover states
         },
-        // Semantic text
-        primary: "#1D1D1F",
-        secondary: "#6E6E73",
-        tertiary: "#AEAEB2",
+        // Semantic text (dark theme)
+        primary: "#FFFFFF",
+        secondary: "#A0A0A0",
+        tertiary: "#6B6B6B",
         // Separator
-        separator: "rgba(0,0,0,0.08)",
+        separator: "rgba(255,255,255,0.1)",
+        // Status colors
+        success: "#34C759",
+        warning: "#FF9F0A",
+        error: "#FF3B30",
+        info: "#CDFF00",
       },
       fontFamily: {
         display: [
@@ -75,31 +78,31 @@ const config: Config = {
         "caption-2": ["11px", { lineHeight: "13px", fontWeight: "400" }],
       },
       borderRadius: {
-        "apple-sm": "8px",
-        "apple-md": "12px",
-        "apple-lg": "18px",
-        "apple-xl": "20px",
+        sm: "8px",
+        md: "12px",
+        lg: "18px",
+        xl: "20px",
         pill: "980px",
       },
       boxShadow: {
-        card: "0 2px 20px rgba(0,0,0,0.06)",
-        "card-hover": "0 4px 24px rgba(0,0,0,0.1)",
-        elevated: "0 8px 32px rgba(0,0,0,0.12)",
-        focus: "0 0 0 4px rgba(241,91,76,0.25)",
+        card: "0 2px 20px rgba(0,0,0,0.3)",
+        "card-hover": "0 4px 24px rgba(0,0,0,0.4)",
+        elevated: "0 8px 32px rgba(0,0,0,0.5)",
+        focus: "0 0 0 4px rgba(205,255,0,0.3)",
       },
       spacing: {
-        "apple-xs": "4px",
-        "apple-sm": "8px",
-        "apple-md": "12px",
-        "apple-lg": "16px",
-        "apple-xl": "20px",
-        "apple-2xl": "24px",
-        "apple-3xl": "32px",
-        "apple-4xl": "40px",
-        "apple-5xl": "48px",
+        xs: "4px",
+        sm: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        "4xl": "40px",
+        "5xl": "48px",
       },
       transitionTimingFunction: {
-        apple: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+        smooth: "cubic-bezier(0.25, 0.1, 0.25, 1)",
       },
     },
   },

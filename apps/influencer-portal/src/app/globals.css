@@ -20,8 +20,8 @@
       "Segoe UI", sans-serif;
     font-size: 17px;
     line-height: 22px;
-    color: #1d1d1f;
-    background-color: #fdfaf6;
+    color: #ffffff;
+    background-color: #2d2d2d;
   }
 
   h1,
@@ -34,10 +34,10 @@
       "Segoe UI", sans-serif;
   }
 
-  /* Adltix focus ring */
+  /* Adltix focus ring - lime accent */
   :focus-visible {
     outline: none;
-    box-shadow: 0 0 0 4px rgba(241, 91, 76, 0.25);
+    box-shadow: 0 0 0 4px rgba(205, 255, 0, 0.3);
     border-radius: 8px;
   }
 
@@ -50,27 +50,29 @@
 }
 
 @layer components {
-  /* Apple HIG pill button */
+  /* Primary button - orange brand */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-apple-blue px-6 py-3 text-[17px] font-semibold text-white transition-all duration-200 ease-apple hover:brightness-110 active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-brand px-6 py-3 text-[17px] font-semibold text-white transition-all duration-200 ease-smooth hover:bg-brand-light active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
   }
 
+  /* Secondary button - outlined */
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill border border-separator bg-white px-6 py-3 text-[17px] font-semibold text-primary transition-all duration-200 ease-apple hover:bg-surface active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill border border-separator bg-surface-elevated px-6 py-3 text-[17px] font-semibold text-primary transition-all duration-200 ease-smooth hover:bg-surface-overlay active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
   }
 
+  /* Ghost button - lime accent */
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill px-6 py-3 text-[17px] font-semibold text-apple-blue transition-all duration-200 ease-apple hover:bg-apple-blue/10 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-6 py-3 text-[17px] font-semibold text-lime transition-all duration-200 ease-smooth hover:bg-lime/10 active:scale-[0.98];
   }
 
-  /* Apple HIG card */
-  .apple-card {
-    @apply rounded-apple-lg bg-white p-6 shadow-card transition-shadow duration-200 ease-apple hover:shadow-card-hover;
+  /* Dark card */
+  .adltix-card {
+    @apply rounded-lg bg-surface-elevated p-6 shadow-card transition-shadow duration-200 ease-smooth hover:shadow-card-hover border border-separator;
   }
 
-  /* Apple HIG input */
-  .apple-input {
-    @apply w-full rounded-apple-md border border-separator bg-white px-4 py-3 text-body text-primary placeholder:text-tertiary transition-all duration-200 ease-apple focus:border-apple-blue focus:shadow-focus focus:outline-none;
+  /* Dark input */
+  .adltix-input {
+    @apply w-full rounded-md border border-separator bg-surface-elevated px-4 py-3 text-body text-primary placeholder:text-tertiary transition-all duration-200 ease-smooth focus:border-lime focus:shadow-focus focus:outline-none;
   }
 
   /* Status badges */
@@ -79,22 +81,22 @@
   }
 
   .badge-success {
-    @apply badge bg-apple-green/10 text-apple-green;
+    @apply badge bg-success/15 text-success;
   }
 
   .badge-warning {
-    @apply badge bg-apple-orange/10 text-apple-orange;
+    @apply badge bg-warning/15 text-warning;
   }
 
   .badge-error {
-    @apply badge bg-apple-red/10 text-apple-red;
+    @apply badge bg-error/15 text-error;
   }
 
   .badge-info {
-    @apply badge bg-apple-blue/10 text-apple-blue;
+    @apply badge bg-lime/15 text-lime;
   }
 
   .badge-neutral {
-    @apply badge bg-surface text-secondary;
+    @apply badge bg-surface-overlay text-secondary;
   }
 }
